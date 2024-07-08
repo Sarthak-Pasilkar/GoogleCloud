@@ -68,6 +68,7 @@ def test_read_from_kafka(tmp_path: Path) -> None:
 
     with patch("sys.argv", ["",
                             '--streaming',
+                            '--environment_type=DOCKER',
                             '--allow_unsafe_triggers',
                             f'--topic={TOPIC_NAME}',
                             f'--bootstrap_server={BOOTSTRAP_SERVER}',
